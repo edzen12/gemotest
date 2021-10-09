@@ -16,7 +16,7 @@ class Gemotest(models.Model):
     number_of_phone = models.CharField(max_length=13)
     date_of_birth = models.DateField()
     email = models.EmailField()
-    number_of_passport = models.CharField(max_length=20, unique=True)
+    number_of_passport = models.CharField(max_length=20)
     address = models.CharField(max_length=255)
     date_of_give_bio = models.DateTimeField()
     date_completed = models.DateTimeField()
@@ -24,7 +24,7 @@ class Gemotest(models.Model):
     def __str__(self):
         return f"{self.first_name} {self.id}"
 
-    def save(self, *args, **kwargs,):
+    def save(self, *args, **kwargs, ):
         qr_code = qrcode.make(f'http://89.223.71.86/reference/{self.number_of_passport}')
         canvas = Image.new('RGB', (400, 400), 'white')
         draw = ImageDraw.Draw(canvas)
@@ -35,7 +35,6 @@ class Gemotest(models.Model):
         self.qr_code.save(file_name, File(buffer), save=False)
         canvas.close()
         super().save(*args, **kwargs)
-
 
     def get_name(self):
         first_letter = self.first_name[:1]
@@ -48,4 +47,3 @@ class Gemotest(models.Model):
         new_first_name = first_letter + new_new + last_letter
         new_last_name = self.last_name[:1]
         return f"{new_first_name} {new_last_name}."
-    

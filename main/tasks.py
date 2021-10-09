@@ -1,13 +1,16 @@
-from gemotest.celery import app
-from django.core.mail import send_mail
 from django.core.mail import EmailMessage
+
+from gemotest.celery import app
 
 
 @app.task
 def send_message(email, pdf):
     send = EmailMessage(
-        'test',
-        '',
+        'Результаты анализов. Лаборатория Гемотест.',
+        """
+        Доброго времени суток! 
+        Спасибо! Лаборатория Гемотест.
+        """,
         'gemotest.info.result@gmail.com',
         [email],
     )
