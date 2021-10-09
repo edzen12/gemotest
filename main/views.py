@@ -27,7 +27,7 @@ def index(request):
                                            )
 
         ida = gemotest.id
-        pdf = pdfkit.from_url('http://127.0.0.1:8000/rew/{id}/'.format(id=ida),
+        pdf = pdfkit.from_url('http://89.223.71.86/rew/{id}/'.format(id=ida),
                               'pdf/sending-{id}.pdf'.format(id=ida))
         file_to_send = 'pdf/sending-{id}.pdf'.format(id=ida)
         file_to_send = os.path.join(settings.BASE_DIR, file_to_send)
