@@ -25,7 +25,7 @@ class Gemotest(models.Model):
         return f"{self.first_name} {self.id}"
 
     def save(self, *args, **kwargs,):
-        qr_code = qrcode.make(f'https://gemotest01.herokuapp.com/reference/{self.number_of_passport}')
+        qr_code = qrcode.make(f'http://89.223.71.86/reference/{self.number_of_passport}')
         canvas = Image.new('RGB', (400, 400), 'white')
         draw = ImageDraw.Draw(canvas)
         canvas.paste(qr_code)
