@@ -2,9 +2,10 @@ body{
     margin: 0;
     width: 90%;
     margin: auto;
+    font-family: Inter,sans-serif;
 }
 .container{
-    width: 100%;
+    width: 90%;
     margin: auto;
 }
 .inline-logo{
@@ -13,11 +14,12 @@ body{
     align-items: center;
 }
 .mainLogo{
+    margin-top: 50px;
     width: 100%;
     height: 100%;
 }
 .mainLogo img{
-    width: 50%;
+    width: 95%;
 }
 .shtrikhCode{
     width: 200px;
@@ -25,7 +27,7 @@ body{
     /* border: 1px solid black; */
 }
 .shtrikh{
-    margin-top: 70px;
+    margin-top: 50px;
     margin-right: 3px;
     display: block;
     align-items: center;
@@ -241,7 +243,7 @@ table .row1{
     .span5{
         width: 68%;
     }
-
+    
     .span3{
         width: 35%;
     }
@@ -286,64 +288,5 @@ table .row1{
 @media screen and (max-width: 950px){
     .span5{
         width: 99%;
-    }
-}
-
-
-@media (max-width: 950px){
-    .orderNumber .title{
-        width: 18% !important;
-    }
-
-    .passport .birthday .birthdayTitle{
-        width: 60% !important;
-    }
-
-    .passportNumberContainer .passNumber .passNumberTitle{
-        width:  50%!important;
-    }
-
-    .passportNumberContainer .passNumber{
-        width: 35% !important;
-    }
-
-    .issuedTitle{
-        width: 13% !important;
-    }
-
-    .addressContent{
-        width: 80%;
-    }
-    .addressTitle{
-        width: 20% !important;
-    }
-
-
-    #orderTitle{
-        width: 13% !important;
-    }
-
-    #birthdayTitle{
-        width: 40% !important;
-    }
-
-    #passNumberTitle{
-        width: 28% !important;
-    }
-
-    #addressTitle{
-        width: 10% !important;
-    }
-
-    #issuedTitle{
-        width: 13% !important;
-    }
-
-    #issued{
-        margin-left: 0 !important;
-    }
-
-    #englishHeader{
-        margin-top: 100px;
     }
 }

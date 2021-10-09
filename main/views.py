@@ -1,5 +1,7 @@
+from django import forms
 from django.shortcuts import render, redirect
 from django.conf import settings
+from main.forms import GemotestForm
 
 from .models import Gemotest
 from .tasks import send_message
@@ -9,22 +11,20 @@ import pdfkit
 
 
 def index(request):
-    if request.method == 'POST':
-        first_name = request.POST.get('name')
-        last_name = request.POST.get('last_name')
-        surname = request.POST.get('surname')
-        number_of_phone = request.POST.get('number_of_phone')
-        email = request.POST.get('email')
-        date_of_birth = request.POST.get('date_of_birth')
-        number_of_passport = request.POST.get('number_of_passport')
-        address = request.POST.get('address')
-        date_of_give_bio = request.POST.get('date_of_give_bio')
-        date_completed = request.POST.get('date_completed')
-        gemotest = Gemotest.objects.create(first_name=first_name, last_name=last_name, surname=surname,
-                                           number_of_phone=number_of_phone, date_of_birth=date_of_birth, email=email,
-                                           number_of_passport=number_of_passport, address=address,
-                                           date_of_give_bio=date_of_give_bio, date_completed=date_completed,
-                                           )
+    form = GemotestForm(request.POST, None)
+    if form.is_valid():
+        gemotest = Gemotest()
+        gemotest.first_name = form.cleaned_data['first_name']
+        gemotest.last_name = form.cleaned_data['last_name']
+        gemotest.surname = form.cleaned_data['surname']
+        gemotest.number_of_phone = form.cleaned_data['number_of_phone']
+        gemotest.email = form.cleaned_data['email']
+        gemotest.date_of_birth = form.cleaned_data['date_of_birth']
+        gemotest.number_of_passport = form.cleaned_data['number_of_passport']
+        gemotest.address = form.cleaned_data['address']
+        gemotest.date_of_give_bio = form.cleaned_data['date_of_give_bio']
+        gemotest.date_completed = form.cleaned_data['date_completed']
+        gemotest.save()
 
         ida = gemotest.id
         pdf = pdfkit.from_url('http://89.223.71.86/rew/{id}/'.format(id=ida),
