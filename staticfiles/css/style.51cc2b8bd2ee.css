@@ -1,0 +1,244 @@
+body{
+    margin: 0;
+    width: 100%;
+    font-family: Inter,sans-serif;
+}
+
+
+/* HEADER */
+.navbar{
+    padding-top: 32px;
+    padding-bottom: 31px;
+    padding-left: 4px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar:after{
+    content: '';
+    display: block;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(90deg,#87c6cb 0,#e9c94d 50%,#35b275 100%);
+    opacity: .15;
+    z-index: -1
+}
+.navbar ul{
+    align-items: center;
+    display: flex;
+}
+.navbar ul li{
+    list-style: none;
+}
+.navbar ul li a{
+    color: #94969c;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 400;
+    font-family: Inter,sans-serif;
+}
+.gemo{
+    margin-right: 42px;
+    margin-top: 10px;
+}
+.navbar ul li a svg{
+    margin-left: -2px;
+}
+.rightSide{
+    width: 50%;
+}
+/* .navbar .gem{
+    font-size: 23px;
+    color: green;
+    font-weight: 600;
+    font-family: Inter,sans-serif;
+} */
+/* HEADER */
+
+
+
+.main_block{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.block_inside{
+    margin-top: 50px;
+    width: 90%; 
+    text-align: center;
+}
+
+.block_inside h1{
+    color: #292d3a;
+    font-size: 30px;
+    margin-bottom: 70px;
+}
+
+.form{
+    background-color: white;
+    width: 68%;
+    text-align: center;
+    border-radius: 15px;
+    padding: 50px 40px;
+    margin: 0 auto;
+    margin-bottom: 70px;
+    border: 1px solid grey;
+}
+
+
+
+.inputs{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    text-align: left;
+}
+.inputs input{
+    width: 47%;
+    height: 50px;
+    border: 1px solid grey;
+    color: grey;
+    padding-left: 20px;
+    box-sizing: border-box;
+    outline: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+#pochta{
+    width: 100%;
+}
+
+.leftinput{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    align-items: flex-start;
+}
+
+.line{
+    width: 100%;
+    height: 1px;
+    background-color:grey;
+    margin: 40px 0;
+}
+
+.form h1{
+    color: #292d3a;
+}
+.form h3{
+    color: black;
+}
+
+
+.anketabutton{
+  border: 2px solid grey;
+    background: none;
+    color: grey;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.anketabutton:hover{
+    background: #007934;
+    color: #fff;
+}
+.form a:hover{
+    background: #007934;
+    color: #fff;
+}
+
+/* FOOTER */
+footer{
+    margin-top: 35px;
+    background: #292d3a;
+    padding: 24px 42px;
+}
+
+footer .title{
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+}
+
+footer .title span{
+    font-size: 12px;
+    display: block;
+    line-height: 20px;
+    font-weight: 500;
+}
+
+footer .contacts{
+    display: flex;
+    padding: 24px 0;
+    margin: 24px 0;
+    border-top: 1px solid rgba(148,150,156,.1);
+    border-bottom: 1px solid rgba(148,150,156,.1);
+}
+
+footer .contacts div:first-child {
+    margin-right: 32px;
+}
+
+footer .contacts div p{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    line-height: 18px;
+}
+
+footer .contacts div p a{
+    font-size: 16px;
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+    margin-bottom: 3px;
+}
+
+footer .contacts div p span{
+    font-size: 11px;
+    color: #94969c;
+}
+
+
+/* Copyright */
+.copyright{
+    font-size: 12px;
+    color: #545761;
+    line-height: 20px;
+}
+
+@media (max-width: 480px){
+    footer .contacts{
+        display: flex;
+        flex-direction: column;
+    }
+    .contacts div:nth-child(2){
+        margin-top: 15px;
+    }
+    .Patient .corona p{
+        line-height: 15px;
+    }
+}
+@media (max-width: 520px){
+    .block_inside h1{
+        font-size: 20px;
+    }
+}
+@media (max-width: 460px){
+    .inputs input{
+        width: 100%;
+    }
+}
+@media (max-width: 350px){
+    .block_inside h1{
+        font-size: 17px;
+    }
+}

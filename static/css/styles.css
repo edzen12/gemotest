@@ -1,0 +1,359 @@
+body{
+    margin: 0;
+}
+.container{
+    width: 90%;
+    margin: auto;
+}
+.inline-logo{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.mainLogo{
+    width: 100%;
+    height: 100%;
+}
+.mainLogo img{
+    width: 50%;
+}
+.shtrikhCode{
+    width: 200px;
+    height: 150px;
+    /* border: 1px solid black; */
+}
+.shtrikh{
+    margin-top: 70px;
+    display: block;
+    align-items: center;
+    text-align: center;
+}
+.shtrikh span{
+    font-size: 10px;
+    margin: auto;
+}
+
+/* form */
+/* .title{
+    text-align: center;
+}
+.title h1{
+    font-size: 35px;
+    font-weight: 600;
+    font-family: Inter,sans-serif;
+}
+.d{
+    background: white;
+    width: 100%;
+    height: auto;
+}
+.d .din{
+    width: 100%;
+    margin: auto;
+    padding: 20px 0;
+}
+.d .din .din1{
+    padding: 3px 0;
+    display: flex;
+    justify-content: left;
+    word-wrap:normal;
+}
+.din1 b{
+    padding-top: 7px;
+} */
+
+.mainContainer h1{
+    text-align: center;
+    font-size: 40px;
+    text-transform: uppercase;
+}
+
+.document{
+    padding: 0;
+}
+
+.document .orderNumber{
+    display: flex;
+}
+
+.document .orderNumber .title{
+    font-size: 18px;
+    font-weight: bold;
+    width: 10%;
+}
+
+.document .orderNumber .content{
+    border-bottom: 1px solid #000;
+    width: 90%;
+    font-size: 18px;
+    padding-bottom: 5px;
+}
+
+/* passport */
+.document .passport .passportContent{
+    display: flex;
+    margin-top: 20px;
+}
+
+.document .passport .passportTitle p{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.passport .fio{
+    width: 65%;
+    display: flex;
+}
+
+.passport .fio .fioTitle{
+    width: 10%;
+}
+
+.passport .fio .fioContent{
+    width: 90%;
+    border-bottom: 1px solid #000;
+    padding-bottom: 5px;
+}
+
+.passport .birthday{
+    width: 35%;
+    display: flex;
+    margin-left: 20px;
+}
+
+.passport .birthday .birthdayTitle{
+    width: 35%;
+}
+
+.passport .birthday .birthdayContent{
+    width: 65%;
+    border-bottom: 1px solid #000;
+    padding-bottom: 5px;
+}
+
+/* passportNumberContainer */
+.passportNumberContainer{
+    display: flex;
+}
+
+.passportNumberContainer .passNumber{
+    width: 30%;
+    display: flex;
+    align-items: center;
+}
+
+.passportNumberContainer .issued{
+    width: 70%;
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.passportNumberContainer .passNumber .passNumberTitle{
+    width: 35%;
+}
+
+.passportNumberContainer .passNumber .passNumberContent{
+    border-bottom: 1px solid #000;
+    padding-bottom: 5px;
+    width: 65%;
+}
+
+.issuedContent{
+    border-bottom: 1px solid #000;
+    padding-bottom: 5px;
+    width: 90%;
+}
+
+.issuedTitle{
+    width: 10%;
+}
+
+.address{
+    display: flex;
+    align-items: center;
+}
+
+.addressTitle{
+    width: 13%;
+}
+
+.addressContent{
+    width: 87%;
+    border-bottom: 1px solid #000;
+    padding-bottom: 5px;
+}
+
+
+/* form */
+
+/* .span1{
+    margin-left: 20px;
+    margin-bottom: 5px;
+    padding-left: 10px;
+    margin-top: 10px;
+    width: 87%;
+    border-bottom: 1px solid black;
+}
+.span2{
+    width: 40%;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 5px;
+    padding-left: 10px;
+    border-bottom: 1px solid black;
+}
+.span3{
+    width: 37%;
+    margin-left: 20px;
+    margin-bottom: 5px;
+    padding-left: 10px;
+    border-bottom: 1px solid black;
+}
+.span4{
+    width: 15%;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 5px;
+    padding-left: 10px;
+    border-bottom: 1px solid black;
+}
+.span5{
+    width: 66%;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 5px;
+    padding-left: 10px;
+    border-bottom: 1px solid black;
+}
+.span6{
+    width: 82%;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 5px;
+    padding-left: 10px;
+    border-bottom: 1px solid black;
+} */
+
+.text{
+    margin-top: 30px;
+}
+.text span{
+    line-height: 23px;
+}
+
+table{
+    margin-top: 20px;
+    width: 100%;
+}
+table .row1{
+    text-align: center;
+}
+.row1:nth-child(1){
+    width: 30%;
+}
+
+.strong{
+    margin-top: 50px;
+}
+
+.official{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.doctor{
+    margin-left: -80px;
+}
+.true{
+    margin-right: -20px;
+}
+
+
+@media screen and (max-width:1242px){
+    .span1{
+        width: 88%;
+    }
+}
+
+@media screen and (max-width: 1195px){
+    .span6{
+        margin-right: 15px;
+    }
+}
+
+.span6{
+        margin-right: -15px;
+        width: 81%;
+    }@media screen and (max-width: 1180px){
+    .span3{
+        width: 36%;
+    }
+}
+
+@media screen and (max-width: 1165px){
+    .span6{
+        margin-right: 10px;
+    }
+}
+
+@media screen and (max-width: 1156px){
+    .span6{
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 1132px){
+    .span1{
+        width: 87.8%;
+    }
+    .span5{
+        width: 68%;
+    }
+
+    .span3{
+        width: 35%;
+    }
+}
+
+@media screen and (max-width: 1120px){
+    .span1{
+        width: 87.3%;
+    }
+    .span3{
+        width: 34%;
+    }
+}
+
+@media screen and (max-width: 1074px){
+    .span5{
+        width: 72%;
+    }
+}
+
+@media screen and (max-width: 1025px){
+    .span3{
+        margin-right: -10px;
+        width: 33%;
+    }
+    .span5{
+        width: 75%;
+    }
+    .span6{
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 1165px){
+    .span6{
+        margin-right: -20px;
+    }
+    .span5{
+        width: 78%;
+    }
+}
+@media screen and (max-width: 950px){
+    .span5{
+        width: 99%;
+    }
+}

@@ -1,0 +1,67 @@
+{% extends 'index.html' %}
+{% block content %}
+<main>
+    <div class="sectionOne">
+        <div class="text">
+            <h1>Проверка справки COVID-19</h1>
+            <p>Verification of a COVID-19 document</p>
+        </div>
+    </div>
+
+
+    <div class="sectionTwo">
+        <div class="true">
+            <div class="icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.0964 23.9984C15.0982 23.9515 17.9752 22.7976 20.1677 20.7611C22.3603 18.7245 23.7116 15.951 23.9589 12.9799C24.2062 10.0089 23.3317 7.05268 21.5056 4.68636C19.6795 2.32004 17.0323 0.712784 14.0789 0.177203C13.4242 0.0632425 12.761 0.00397444 12.0964 2.07705e-05C8.9521 -0.00578712 5.92959 1.20662 3.67159 3.37941C1.4136 5.5522 0.0982543 8.51395 0.00528471 11.6348C-0.0876849 14.7557 1.04905 17.7895 3.17376 20.091C5.29847 22.3925 8.24352 23.7802 11.3826 23.959C11.619 23.9918 11.8578 24.0049 12.0964 23.9984ZM9.04319 16.6748L5.73229 13.3871C5.54646 13.2041 5.39897 12.9864 5.29832 12.7465C5.19766 12.5066 5.14584 12.2492 5.14584 11.9893C5.14584 11.7295 5.19766 11.4721 5.29832 11.2322C5.39897 10.9923 5.54646 10.7746 5.73229 10.5916C6.10375 10.2249 6.60623 10.0191 7.13 10.0191C7.65377 10.0191 8.15626 10.2249 8.52772 10.5916L10.5103 12.5603L13.0876 10.001L15.7046 7.38261C16.0761 7.01594 16.5786 6.81013 17.1024 6.81013C17.6261 6.81013 18.1286 7.01594 18.5001 7.38261C18.6859 7.56563 18.8334 7.78337 18.934 8.02327C19.0347 8.26317 19.0865 8.52049 19.0865 8.78038C19.0865 9.04027 19.0347 9.29759 18.934 9.5375C18.8334 9.7774 18.6859 9.99514 18.5001 10.1782L12.2748 16.2417L11.8386 16.6748C11.4672 17.0415 10.9647 17.2473 10.4409 17.2473C9.91714 17.2473 9.41465 17.0415 9.04319 16.6748Z"
+                          fill="#33945D"></path>
+                </svg>
+            </div>
+            <div class="sentense">
+                <p>
+                    <strong>Справка действительна</strong> <br>
+                    The document is valid
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- <hr> -->
+
+    <div class="sectionRus">
+        <div class="Patient">
+            <div class="patient">
+                <p>Пациент</p>
+                <p class="strong">{{ info.get_name }}</p>
+            </div>
+            <div class="born">
+                <p>Год рождения</p>
+                <p class="strong">{{ info.date_of_birth }}</p>
+            </div>
+            <div class="corona">
+                <p>Коронавирус, РНК (SARS-CoV-2, ПЦР) мазок, кач., срочно</p>
+                <p class="strong">РНК НЕ ОБНАРУЖЕНА ({{ info.date_completed }})</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- <hr> -->
+
+    <div class="sectionThree">
+        <div class="Patient">
+            <div class="patient">
+                <p>Patient</p>
+                <p class="strong">{{ info.get_name }}</p>
+            </div>
+            <div class="born">
+                <p>Year of birth</p>
+                <p class="strong">{{ info.date_of_birth }}</p>
+            </div>
+            <div class="corona">
+                <p>Coronavirus, RNA (SARS-CoV-2, Real-time PCR) smear, qualitative</p>
+                <p class="strong">Negative ({{ info.date_completed }})</p>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}

@@ -1,0 +1,349 @@
+body{
+    margin: 0;
+    width: 90%;
+    margin: auto;
+}
+.container{
+    width: 100%;
+    margin: auto;
+}
+.inline-logo{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.mainLogo{
+    width: 100%;
+    height: 100%;
+}
+.mainLogo img{
+    width: 50%;
+}
+.shtrikhCode{
+    width: 200px;
+    height: 150px;
+    /* border: 1px solid black; */
+}
+.shtrikh{
+    margin-top: 70px;
+    margin-right: 3px;
+    display: block;
+    align-items: center;
+    text-align: center;
+}
+.shtrikh span{
+    font-size: 10px;
+    margin: auto;
+}
+
+.title{
+    text-align: center;
+}
+.title h1{
+    font-size: 35px;
+    font-weight: 600;
+    font-family: Inter,sans-serif;
+}
+.mainContainer h1{
+    text-align: center;
+    font-size: 40px;
+    text-transform: uppercase;
+}
+
+.document{
+    padding: 0;
+}
+
+.document .orderNumber{
+    display: flex;
+}
+
+.document .orderNumber .title{
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: -25px;
+    width: 10%;
+}
+
+.document .orderNumber .content{
+    border-bottom: 1px solid #000;
+    width: 100%;
+    font-size: 18px;
+    padding-bottom: 5px;
+}
+
+/* passport */
+.document .passport .passportContent{
+    display: flex;
+    margin-top: 20px;
+}
+
+.document .passport .passportTitle p{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.passport .fio{
+    width: 65%;
+    display: flex;
+}
+
+.passport .fio .fioTitle{
+    width: 10%;
+}
+
+.passport .fio .fioContent{
+    width: 90%;
+    border-bottom: 1px solid #000;
+    padding-bottom: 5px;
+}
+
+.passport .birthday{
+    width: 35%;
+    display: flex;
+    margin-left: 20px;
+}
+
+.passport .birthday .birthdayTitle{
+    width: 35%;
+}
+
+.passport .birthday .birthdayContent{
+    width: 65%;
+    border-bottom: 1px solid #000;
+    padding-bottom: 5px;
+}
+
+/* passportNumberContainer */
+.passportNumberContainer{
+    display: flex;
+}
+
+.passportNumberContainer .passNumber{
+    width: 30%;
+    display: flex;
+    align-items: center;
+}
+
+.passportNumberContainer .issued{
+    width: 70%;
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.passportNumberContainer .passNumber .passNumberTitle{
+    width: 35%;
+}
+
+.passportNumberContainer .passNumber .passNumberContent{
+    border-bottom: 1px solid #000;
+    padding-bottom: 5px;
+    width: 65%;
+}
+
+.issuedContent{
+    border-bottom: 1px solid #000;
+    padding-bottom: 5px;
+    width: 90%;
+}
+
+.issuedTitle{
+    width: 10%;
+}
+
+.address{
+    display: flex;
+    align-items: center;
+}
+
+.addressTitle{
+    width: 13%;
+}
+
+.addressContent{
+    width: 87%;
+    border-bottom: 1px solid #000;
+    padding-bottom: 5px;
+}
+.text{
+    margin-top: 30px;
+}
+.text span{
+    line-height: 23px;
+}
+
+table{
+    margin-top: 20px;
+    width: 100%;
+}
+table .row1{
+    text-align: center;
+}
+.row1:nth-child(1){
+    width: 30%;
+}
+
+.strong{
+    margin-top: 50px;
+}
+
+.official{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.doctor{
+    margin-left: -80px;
+}
+.true{
+    margin-right: -20px;
+}
+
+
+@media screen and (max-width:1242px){
+    .span1{
+        width: 88%;
+    }
+}
+
+@media screen and (max-width: 1195px){
+    .span6{
+        margin-right: 15px;
+    }
+}
+
+.span6{
+        margin-right: -15px;
+        width: 81%;
+    }@media screen and (max-width: 1180px){
+    .span3{
+        width: 36%;
+    }
+}
+
+@media screen and (max-width: 1165px){
+    .span6{
+        margin-right: 10px;
+    }
+}
+
+@media screen and (max-width: 1156px){
+    .span6{
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 1132px){
+    .span1{
+        width: 87.8%;
+    }
+    .span5{
+        width: 68%;
+    }
+
+    .span3{
+        width: 35%;
+    }
+}
+
+@media screen and (max-width: 1120px){
+    .span1{
+        width: 87.3%;
+    }
+    .span3{
+        width: 34%;
+    }
+}
+
+@media screen and (max-width: 1074px){
+    .span5{
+        width: 72%;
+    }
+}
+
+@media screen and (max-width: 1025px){
+    .span3{
+        margin-right: -10px;
+        width: 33%;
+    }
+    .span5{
+        width: 75%;
+    }
+    .span6{
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 1165px){
+    .span6{
+        margin-right: -20px;
+    }
+    .span5{
+        width: 78%;
+    }
+}
+@media screen and (max-width: 950px){
+    .span5{
+        width: 99%;
+    }
+}
+
+
+@media (max-width: 950px){
+    .orderNumber .title{
+        width: 18% !important;
+    }
+
+    .passport .birthday .birthdayTitle{
+        width: 60% !important;
+    }
+
+    .passportNumberContainer .passNumber .passNumberTitle{
+        width:  50%!important;
+    }
+
+    .passportNumberContainer .passNumber{
+        width: 35% !important;
+    }
+
+    .issuedTitle{
+        width: 13% !important;
+    }
+
+    .addressContent{
+        width: 80%;
+    }
+    .addressTitle{
+        width: 20% !important;
+    }
+
+
+    #orderTitle{
+        width: 13% !important;
+    }
+
+    #birthdayTitle{
+        width: 40% !important;
+    }
+
+    #passNumberTitle{
+        width: 28% !important;
+    }
+
+    #addressTitle{
+        width: 10% !important;
+    }
+
+    #issuedTitle{
+        width: 13% !important;
+    }
+
+    #issued{
+        margin-left: 0 !important;
+    }
+
+    #englishHeader{
+        margin-top: 100px;
+    }
+}

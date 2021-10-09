@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Inter:500,600,800&display=swap&subset=cyrillic,cyrillic-ext,latin-ext"
+          rel="stylesheet">
+</head>
+<body>
+<header>
+    <div class="inline-logo">
+
+        <div class="mainLogo">
+            <img src="{% static './Images/photoeditorsdk-export__2_-removebg-preview.png' %}" alt="">
+
+        </div>
+
+        <div style="margin-right:25px" class="shtrikh">
+            <img style='height:200px' src="{{ obj.qr_code.url }}">
+        </div>
+    </div>
+
+
+</header>
+
+<main>
+    <div class="title">
+        <h1>СЕРТИФИКАТ</h1>
+    </div>
+
+    <div class="d" style="background-color: white;">
+        <div class="din">
+            <div class="din1">
+                <b>№ заказа:</b>
+                <div class="span1" style="width:89%">{{ obj.generate_number }}</div>
+            </div>
+            <div class="din1">
+                <b>Документ (паспорт, св. о рождении)</b>
+            </div>
+            <div class="din1">
+                ФИО:
+                <div class="span2">{{ obj.first_name }} {{ obj.last_name }} {{ obj.surname }}</div>
+                Дата рождения:
+                <div class="span3" style="width:39.8%">{{ obj.date_of_birth }}</div>
+            </div>
+            <div class="din1">
+                Серия:
+                <div class="span4">{{ obj.number_of_passport }}</div>
+                Выдан:
+                <div class="span5" style="width:68.8%">STATE OF QATAR</div>
+            </div>
+            <div class="din1">
+                Адрес проживания:
+                <div class="span6" style="width:85%">{{ obj.address }}</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="text">
+        <span>О результатах лабораторного теста на коронавирусную инфекцию SARS-CoV-2</span>
+    </div>
+
+    <table border="1" cellspacing="0" cellpadding="15" width="90%" height="130">
+        <tr>
+            <td class="row1">Тест</td>
+            <td class="row1">Дата взятия <br> биоматериала <br> (московское время)</td>
+            <td class="row1">Дата выполнения <br> (московское время)</td>
+            <td class="row1">Результат тестирования</td>
+        </tr>
+        <tr>
+            <td>Коронавирус, РНК (SARS-CoV-2, ПЦР) <br> мазок, кач., срочно</td>
+            <td>{{ obj.date_of_give_bio }}</td>
+            <td>{{ obj.date_completed }}</td>
+            <td>РНК не обнаружена</td>
+        </tr>
+    </table>
+
+    <div class="text">
+        <span>Качественное определение РНК коронавируса SARS-CoV-2 (возбудителя COVID-19) в мазках из носоглотки и ротоглотки</span>
+        <br>
+        <span>выполняется методом ПЦР в режиме реального времени.</span>
+    </div>
+
+    <div class="strong">
+        <b>Информируем, что любая подделка документа запрещена и преследуется по закону.</b>
+    </div>
+
+    <div class="official">
+        <div class="doctor">
+            <img src="{% static './Images/photoeditorsdk-export__3_-removebg-preview.png' %}" alt="">
+        </div>
+
+        <div class="true">
+            <img src="{% static './Images/photoeditorsdk-export__4_-removebg-preview.png' %}" alt="">
+        </div>
+    </div>
+</main>
+</body>
+</html>
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/EnglishList.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Inter:500,600,800&display=swap&subset=cyrillic,cyrillic-ext,latin-ext"
+          rel="stylesheet">
+</head>
+<body>
+<header>
+    <div class="inline-logo">
+
+        <div class="mainLogo">
+            <img src="{% static './Images/photoeditorsdk-export__5_-removebg-preview.png' %}" alt="">
+
+        </div>
+
+        <div style="" class="shtrikh">
+            <img style='height:200px' src="{{ obj.qr_code.url }}">
+        </div>
+    </div>
+
+</header>
+
+<main>
+    <div class="title">
+        <h1>CERTIFICATE</h1>
+    </div>
+
+    <div class="d" style="background-color: white;">
+        <div class="din">
+            <div class="din1">
+                <b>Order:</b>
+                <div class="span1" style="width:89.5%">{{ obj.generate_number }}</div>
+            </div>
+            <div class="din1">
+                <b>Passport (ID)</b>
+            </div>
+            <div class="din1">
+                Name:
+                <div class="span2">{{ obj.first_name }} {{ obj.last_name }} {{ obj.surname }}</div>
+                Date of birth:
+                <div class="span3" style="width:39.8%">{{ obj.date_of_birth }}</div>
+            </div>
+            <div class="din1">
+                Number:
+                <div class="span4">{{ obj.number_of_passport }}</div>
+                Issued:
+                <div class="span5" style="width:67%">STATE OF QATAR</div>
+            </div>
+            <div class="din1">
+                Address:
+                <div class="span6" style="width:89%">{{ obj.address }}</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="text">
+        <span>About the results of laboratory tests for coronavirus infection SARS-CoV-2</span>
+    </div>
+
+    <table border="1" cellspacing="0" cellpadding="15" width="90%" height="130">
+        <tr>
+            <td class="row1">Name of research</td>
+            <td class="row1">Date of biomaterial taken <br> (moscow time)</td>
+            <td class="row1">Date of completion <br> (moscow time)</td>
+            <td class="row1">Test result</td>
+        </tr>
+        <tr>
+            <td>Coronavirus, RNA (SARS-CoV-2, Real- <br> time PCR) smear, qualitative</td>
+            <td>{{ obj.date_of_give_bio }}</td>
+            <td>{{ obj.date_completed }}</td>
+            <td>Negative</td>
+        </tr>
+    </table>
+
+    <div class="text">
+        <span>Qualitative determination of the RNA of the SARS-CoV-2 coronavirus (the causative agent of COVID-19) in smears from the</span>
+        <br>
+        <span>nasopharynx and oropharynx is performed by real-time PCR.</span>
+    </div>
+
+    <div class="strong">
+        <b>Forgery of documents is punishable by law.</b>
+    </div>
+
+    <div class="official">
+        <div class="doctor">
+            <img src="{% static './Images/photoeditorsdk-export__3_-removebg-preview.png' %}" alt="">
+        </div>
+
+        <div class="true">
+            <img src="{% static './Images/photoeditorsdk-export__4_-removebg-preview.png' %}" alt="">
+        </div>
+    </div>
+</main>
+</body>
+</html>

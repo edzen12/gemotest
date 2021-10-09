@@ -1,0 +1,45 @@
+{% extends 'index.html'%}
+{% load static %}
+{% block content %}
+<div class="main_block">
+    <div class="block_inside">
+        <h1>
+            Форма запроса на проведение анализа на COVID-19
+        </h1>
+        <form method="POST" enctype="multipart/form-data">
+            <div method="posts" class="form">
+            {% csrf_token %}
+                <h1>Личные данные</h1>
+                <div class="inputs">
+                    <input name="name" type="text" placeholder="Имя (латиницей)"/>
+                    <input name="last_name" type="text" placeholder="Фамилия (латиницей)"/>
+                    <input name="surname" type="text" placeholder="Отчество (латиницей)"/>
+                    <input name="number_of_phone" class="leftinput" type="text"
+                           placeholder="Номер телефона (+7)"/>
+                    <input name="email" type="text" placeholder="Почта" id="pochta"/>
+                    <input name="date_of_birth" type="text" placeholder="дата рождения (1997-10-29)" id="pochta"/>
+                    <div class="line">
+                    </div>
+                </div>
+                <h1>Паспортные данные</h1>
+                <div class="inputs">
+                    <input name="number_of_passport" type="text" placeholder="Серия и номер паспорта"/>
+                    <input name="address" type="text" placeholder="Адрес"/>
+                    <div class="line">
+                    </div>
+                </div>
+                <h1>Данные анализов</h1>
+                <div class="inputs">
+                    <input name="date_of_give_bio" type="text" placeholder="Дата взятия биоматериала (YYYY-MM-DD HH:MM)"/>
+                    <input name="date_completed" type="text" placeholder="Дата выполнения (YYYY-MM-DD HH:MM)"/>
+                    <div class="line">
+                    </div>
+                </div >
+                <button class='anketabutton' type="submit">
+                    Отправить
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}
